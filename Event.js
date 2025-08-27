@@ -1,30 +1,28 @@
 
 // call btn function
 
-const copyBtns = document.getElementsByClassName('call-card-btn');
+const callBtns = document.getElementsByClassName('call-card-btn');
 
 
-for (let copyBtn of copyBtns) {
-    copyBtn.addEventListener('click', function () {
+for (let callBtn of callBtns) {
+    callBtn.addEventListener('click', function () {
 
         let coinNumber = document.getElementById('coin').innerText;
-        let copyNumber = document.getElementById('copy-Count').innerText;
-        if (coinNumber < 200){
-            alert('taha kom')
+       
+        const serviceName = callBtn.parentNode.parentNode.childNodes[5].innerText;
+         const serviceNumber = callBtn.parentNode.parentNode.childNodes[7].innerText;
+        if (coinNumber < 20){
+            alert('আপনার পর্যাপ্ত কয়েন নেই দয়া করে রিচার্জ করুন।')
             return
-        }else{
-            console.log('beshi');
         }
-        // console.log(copyNumber);
-        // console.log(coinNumber);
-        // console.log(HeartNumber);
-        const iconImg = copyBtn.parentNode.parentNode.childNodes[1].childNodes[1];
-        // console.log(iconImg);
-        const cardTitel = copyBtn.parentNode.parentNode.childNodes[3].innerText;
+        alert( ` 📞 ${serviceName} ${serviceNumber} `)
+        document.getElementById('coin').innerText = coinNumber - 20;
+
+        const cardTitel = callBtn.parentNode.parentNode.childNodes[3].innerText;
         // console.log(cardTitel);
-        const serviceName = copyBtn.parentNode.parentNode.childNodes[5].innerText;
+        
         // console.log(serviceName);
-        const serviceNumber = copyBtn.parentNode.parentNode.childNodes[7].innerText;
+       
         const CallHistoryContenar = document.getElementById('call-history-contenar')
         // console.log(serviceNumber);
         const now = new Date();
@@ -53,6 +51,25 @@ for (let loveBtn of loveBtns) {
         let HeartNumber = document.getElementById('heart-count').innerText;
         let updetedHeartNumber = Number(HeartNumber) + 1;
         document.getElementById('heart-count').innerText = updetedHeartNumber
-        console.log(HeartNumber);
+
+    })
+}
+
+
+// copy btn function
+
+const copyBtns = document.getElementsByClassName("copy-card-btn")
+
+for (let copyBtn of copyBtns){
+    copyBtn.addEventListener('click',function(){
+        const serviceNumber = copyBtn.parentNode.parentNode.childNodes[7].innerText;
+        alert(`নম্বর কপি হয়েছে : ${serviceNumber}`)
+         navigator.clipboard.writeText(serviceNumber)
+
+        let copyNumber = document.getElementById('copy-Count').innerText;
+        let updatedCopyNumber = Number(copyNumber) + 1;
+        document.getElementById('copy-Count').innerText = updatedCopyNumber;
+    
+        
     })
 }
