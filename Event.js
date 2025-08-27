@@ -73,3 +73,12 @@ for (let copyBtn of copyBtns){
         
     })
 }
+
+
+// clear btn function
+
+
+const clearContenar = document.getElementById('clear').addEventListener('click', function(){
+const CallHistoryContenar = document.getElementById('call-history-contenar')
+CallHistoryContenar.innerHTML = ''
+})
