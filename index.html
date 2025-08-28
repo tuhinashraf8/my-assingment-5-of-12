@@ -14,12 +14,12 @@
 
 <body class="mx-auto">
     <section class=" w-11/12 mx-auto ">
-        <nav class="flex justify-between mt-5 ">
-            <div class="flex  items-center gap-5  ">
-                <img class="w-12 h-auto" src="./assets/logo.png" alt="">
-                <h1 class="font-bold">Emergency <br> Service</h1>
+        <nav class="lg:flex justify-between mt-5 ">
+            <div class=" lg:flex  items-center lg:gap-5 gap-2 ">
+                <img class="lg:w-12 mx-auto h-auto" src="./assets/logo.png" alt="">
+                <h1 class="font-bold text-center lg:text-xl text-5xl">Emergency <br> Service</h1>
             </div>
-            <div class="flex gap-5">
+            <div class="flex lg:gap-5 gap-2 justify-center mt-5">
                 <div class="flex  items-center gap-5 justify-center bg-green-200 rounded-3xl py-1 px-7">
                     <p id="heart-count" class="font-bold ">0</p>
                     <img class="w-7 h-auto" src="./assets/heart.png" alt="">
@@ -35,7 +35,7 @@
         </nav>
     </section>
     <section>
-        <div class="class= bg-linear-[#013223,#006747,#013223] text-center space-y-5 mt-5 py-5">
+        <div class="class= bg-gradient-to-b from-[#013223] via-[#006747] to-[#013223] text-center space-y-5 mt-5 py-5">
             <img src="./assets/logo-dark.png" alt="" class="w-24 h-auto mx-auto">
             <h1 class="text-white text-4xl font-bold">জরুরি সেবা ডিরেক্টরি</h1>
             <p class="text-white ">Government Emergency Services at Your Fingertip – A Project by Government of the
@@ -43,8 +43,8 @@
         </div>
     </section>
     <section class="bg-green-100  ">
-        <div class="flex gap-5 w-11/12 mx-auto py-10">
-            <div class="grid grid-cols-3 gap-5 w-3/4  ">
+        <div class="lg:flex gap-5 w-11/12 mx-auto py-10">
+            <div id="card-contenar" class="grid lg:grid-cols-3 gap-5 lg:w-3/4  ">
                 <div class="bg-white flex flex-col justify-between p-5 gap-3 rounded-lg shadow-lg">
                     <div class="flex items-center justify-between">
                         <img src="./assets/emergency.png" class="w-11 h-auto bg-red-100 p-2 rounded-lg" alt="">
@@ -191,7 +191,7 @@
                     </div>
                 </div>
             </div>
-            <div  class=" w-1/4 rounded-lg shadow-lg bg-white p-5 ">
+            <div  class=" lg:w-1/4 rounded-lg shadow-lg bg-white p-5 ">
                 <div class="flex justify-between items-center">
                     <p><i class="fa-solid fa-clock"></i> Call history</p>
                     <button id="clear" class="bg-green-600 rounded-2xl px-8 text-white">clear</button>
@@ -204,7 +204,12 @@
         </div>
 
     </section>
-    <script src="/Event.js"></script>
+
+    <!-- দুই ভাবেই করেছি যেটা ইচ্ছা দেখতে পারেন -->
+     
+    <!-- <script src="/Event.js"></script> -->
+    <script src="/Event-2.js"></script>
+
 </body>
 
 </html>

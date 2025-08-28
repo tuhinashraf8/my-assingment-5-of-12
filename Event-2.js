@@ -1,12 +1,19 @@
+// heart btn function
+const cardContenar = document.getElementById("card-contenar")
+cardContenar.addEventListener('click', function (e) {
+    if (e.target.className.includes('heart-btn')) {
+        let HeartNumber = document.getElementById('heart-count').innerText;
+        let updetedHeartNumber = Number(HeartNumber) + 1;
+        document.getElementById('heart-count').innerText = updetedHeartNumber
+    }
+})
 
 
 
-
-// call btn function
-
-const callBtns = document.getElementsByClassName('call-card-btn');
-for (let callBtn of callBtns) {
-    callBtn.addEventListener('click', function () {
+// Call Buttons function
+cardContenar.addEventListener('click', function (e) {
+    if (e.target.className.includes('call-card-btn')) {
+        const callBtn = e.target;
         let coinNumber = document.getElementById('coin').innerText;
         const serviceName = callBtn.parentNode.parentNode.childNodes[5].innerText;
         const serviceNumber = callBtn.parentNode.parentNode.childNodes[7].innerText;
@@ -16,40 +23,30 @@ for (let callBtn of callBtns) {
         }
         alert(` 📞 ${serviceName} ${serviceNumber} `)
         document.getElementById('coin').innerText = coinNumber - 20;
+
         const cardTitel = callBtn.parentNode.parentNode.childNodes[3].innerText;
         const CallHistoryContenar = document.getElementById('call-history-contenar')
         const now = new Date();
         const localTime = now.toLocaleTimeString();
         const newCallHistory = document.createElement("div");
         newCallHistory.innerHTML = `
-    <div class="bg-slate-100 flex justify-between items-center p-3 rounded-xl my-3">
+    <div class="bg-slate-100 flex justify-between items-center p-3 my-3 rounded-xl transition duration-300 ease-in-out hover:bg-green-200">
                     <div>
                         <p>${cardTitel}</p>
                         <p>${serviceNumber}</p>
                     </div>
-                    <p>${localTime}</p>   
+                    <p>${localTime}</p>  
                 </div>`
+        newCallHistory.classList.add("transition", "duration-300", "ease-in-out", "hover:bg-green-200");
         CallHistoryContenar.appendChild(newCallHistory)
-    })
-}
-
-
-
-// love btn function
-const loveBtns = document.getElementsByClassName('heart-btn');
-for (let loveBtn of loveBtns) {
-    loveBtn.addEventListener('click', function () {
-        let HeartNumber = document.getElementById('heart-count').innerText;
-        let updetedHeartNumber = Number(HeartNumber) + 1;
-        document.getElementById('heart-count').innerText = updetedHeartNumber
-    })
-}
+    }
+})
 
 
 // copy btn function
-const copyBtns = document.getElementsByClassName("copy-card-btn")
-for (let copyBtn of copyBtns) {
-    copyBtn.addEventListener('click', function () {
+cardContenar.addEventListener('click', function (e) {
+    if (e.target.className.includes('copy-card-btn')) {
+        const copyBtn = e.target;
         const serviceNumber = copyBtn.parentNode.parentNode.childNodes[7].innerText;
         alert(`নম্বর কপি হয়েছে : ${serviceNumber}`)
         navigator.clipboard.writeText(serviceNumber)
@@ -57,8 +54,8 @@ for (let copyBtn of copyBtns) {
         let copyNumber = document.getElementById('copy-Count').innerText;
         let updatedCopyNumber = Number(copyNumber) + 1;
         document.getElementById('copy-Count').innerText = updatedCopyNumber;
-    })
-}
+    }
+})
 
 
 // clear btn function
