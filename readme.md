@@ -1,4 +1,4 @@
-<!-- 1. What is the difference between getElementById, getElementsByClassName, and querySelector / querySelectorAll?
+ 1. What is the difference between getElementById, getElementsByClassName, and querySelector / querySelectorAll?
 
 
  getElementById দিয়ে HTML এর ডকুমেন্ট থেকে নির্দিষ্ট একটি এলিমেন্ট কে খুঁজে বের করা যায়। 
@@ -71,4 +71,4 @@ preventDefault() হল ডিফল্ট ব্রাউজারের রি
 
 
 দুইটার মধ্যে পার্থক্য হল দুইটা ভিন্ন ভিন্ন কাজ একটা হল ব্রাউজারের ডিফল্ট যে রিলোট রয়েছে সেটাকে বন্ধ করে আর আরেকটি হল ইভেন্টের বা বোলিং বন্ধ করে
- -->
+
